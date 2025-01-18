@@ -6,7 +6,7 @@
                 <div class="row align-items-center">
                     <div class="col-xl-3 col-lg-2">
                         <div class="logo">
-                            <a href="index.html">
+                            <a href="/">
                                 <img src="{% static 'img/logo2.png' %}" alt="">
                             </a>
                         </div>
@@ -15,9 +15,9 @@
                         <div class="main-menu  d-none d-lg-block">
                             <nav>
                                 <ul id="navigation">
-                                    <li><a href="">احجز دكتورك</a></li>|
-                                    <li><a href="">المقالات</a></li>|
-                                    <li><a href="">الصفحه الشخصيه </a></li>|
+                                    <li><a href="{% url 'doctor:doctor' %}">احجز دكتورك</a></li>|
+                                    <li><a href="{% url 'blog:blog' %}">المقالات</a></li>|
+                                    <li><a href="{% url 'accounts:profile' %}">الصفحه الشخصيه </a></li>|
                                     <li><a href="contact.html">اتصل بنا</a></li>
                                 </ul>
                             </nav>
@@ -32,10 +32,12 @@
                             </div>
                             
                             <div class="phone_num d-none d-xl-block">
-                                <a class="boxed-btn3" href="">سجل الدخول</a>
+                                <!-- Link to the login page -->
+                                <a class="boxed-btn3" href="{% url 'accounts:login' %}">سجل الدخول</a>
                             </div>
                             <div class="d-none d-lg-block">
-                                <a class="boxed-btn3" style="background-color: crimson;" href="">التسجيل</a>
+                                <!-- Link to the signup page -->
+                                <a class="boxed-btn3" style="background-color: crimson;" href="{% url 'accounts:signup' %}">التسجيل</a>
                             </div>
                             
                         </div>

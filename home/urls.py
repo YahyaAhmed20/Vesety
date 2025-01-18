@@ -9,7 +9,7 @@ app_name = 'home'
 
 urlpatterns = [
     path('', views.home, name='home'),
-    path('doctor_list/', views.doctor_list, name='doctor_list'),
+    path('doctor/<int:doctor_id>/', views.doctor_list, name='doctor_list'),  # Ensure this line exists
     
    
 

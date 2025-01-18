@@ -8,8 +8,8 @@ from . import views
 app_name = 'doctor'
 
 urlpatterns = [
-    path('', views.add_new_doctor, name='add_new_doctor'),
-    path('delete_doctor', views.delete_doctor, name='delete_doctor'),
-    path('update_doctor', views.update_doctor, name='update_doctor'),
+    path('', views.add_new_doctor, name='doctor'),
+    path('delete_doctor', views.delete_doctor, name='doctor'),
+    path('update_doctor', views.update_doctor, name='doctor'),
 ]
 
